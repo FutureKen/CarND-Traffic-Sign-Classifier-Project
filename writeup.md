@@ -127,9 +127,9 @@ I augmented the data to make sure each class has at least 1000 training images. 
 I found that the validation accuracy was much lower than the test accuracy, and I also noticed that some of the augmented data looks similar with the original ones. This indicates that the model is over fitting. So I added a dropout layer after each fully connected layer. The validation accuracy raised to around 0.96. I tried adding dropout layer after each convulutional layer, with a higher keep probability. The accuracy stopped at around 0.97 after I tuned with the Epoch, Batchsize, learning rate and keep probability parameters.
 
 My final model results were:
-* training set accuracy of 0.993
-* validation set accuracy of 0.970
-* test set accuracy of 0.943
+* training set accuracy of 0.995
+* validation set accuracy of 0.969
+* test set accuracy of 0.944
 
 ###Test a Model on New Images
 
@@ -168,7 +168,7 @@ Here are the visualization graphs of top 3 probabilities for each test image.
 ![Top 3 probs][image6] 
 ![Top 3 probs][image7] 
 
-For all ten images, the model is pretty certain with the prediction to be what they should be, with probability over 95%, except the third one, it looks like it was distracted with two similar classes(All of them are triangle, shapes inside the traffic sign looks similar).
+For all ten images, the model is pretty certain with the prediction to be what they should be, with probability over 90%. 
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
@@ -177,4 +177,4 @@ For all ten images, the model is pretty certain with the prediction to be what t
 Here are some of the NN states with test images.
 ![States][image8] 
 
-From the feature maps, we can see that the neural network use the shapes, lines of the traffic sign mostly.
+From the feature maps, we can see that the neural network use the shapes and lines of the traffic sign mostly.
